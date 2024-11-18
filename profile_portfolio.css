@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #f44336;
+  --font-size: 16px;
+  --primary-text-color: rgb(255, 255, 255);
+  --secondary-text-color: rgb(116, 250, 250);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+body {
+  background-color: rgb(2, 22, 24);
+  color: rgb(231, 240, 248);
+}
+.top_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 25px;
+  font-style: normal;
+}
+.tabs {
+  display: flex;
+  gap: 1.5cm;
+  justify-content: right;
+  padding-right: 50px;
+}
+.name {
+  display: flex;
+  gap: 3px;
+}
+.name #fname {
+  color: var(--primary-text-color);
+}
+#lname {
+  color: var(--secondary-text-color);
+}
+h3 {
+  margin: 0;
+  padding: 5px;
+}
+.tabs h3 {
+  cursor: pointer;
+}
+.discription {
+  padding: 100px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr; 
+  /* gap: 20px; */
+}
+
+.discription p {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.discription .hello {
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.discription .im {
+  color: var(--secondary-text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.discription .second_line {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+  margin-top: 20px;
+}
+
+@keyframes shadow-pulse {
+  50% {
+    text-shadow: 0 0 20px rgb(116, 250, 250),
+    0 0 20px rgb(116, 250, 250),
+    0 0 30px rgb(116, 250, 250),
+    0 0 40px rgb(51, 215, 234);
+  }
+}
+
+.second_line {
+  animation: shadow-pulse 2s infinite;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 70px;
+}
+.discription {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Add space between the columns */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.details {
+  grid-column: 1 / 2; /* Ensure the description takes the first column */
+  text-align: left;
+}
+
+.profile_pic {
+  grid-column: 2 / 3; /* Ensure the image takes the second column */
+  justify-self: center; /* Aligns the image to the right within its column */
+  width: 500px; /* Ensure width and height are equal */
+  height: 500px;
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 0 25px var(--primary-text-color);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  overflow: hidden; /* Ensures the image stays within the rounded shape */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.profile_pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+}
+
+.profile_pic:hover {
+  box-shadow: 0 0 25px var(--secondary-text-color),
+              0 0 25px var(--secondary-text-color),
+              0 0 25px var(--secondary-text-color);
+}
+
+
