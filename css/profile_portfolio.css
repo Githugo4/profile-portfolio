@@ -99,7 +99,7 @@ h3 {
 }
 
 .bio {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-top: 40px;
 }
@@ -187,7 +187,7 @@ h3 {
   }
 
   .bio {
-    font-size: 0.9rem; /* Reduced font size for better mobile view */
+    font-size: 1rem; /* Reduced font size for better mobile view */
     margin-top: 20px;
   }
 
@@ -217,7 +217,7 @@ h3 {
   }
 
   .bio {
-    font-size: 0.8rem; /* Reduced font size */
+    font-size: 0.9rem; /* Reduced font size */
   }
 
   .social_media a {
