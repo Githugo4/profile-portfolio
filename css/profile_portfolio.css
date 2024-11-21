@@ -4,39 +4,50 @@
   --font-size: 10px;
   --primary-text-color: rgb(255, 255, 255);
   --secondary-text-color: rgb(116, 250, 250);
+  --background-color: rgb(2, 22, 24);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px; /* Adjusted font size for better readability */
 }
 
 body {
-  background-color: rgb(2, 22, 24);
+  background-color: var(--background-color);
   color: rgb(231, 240, 248);
+  font-family: "Lora", serif;
+  line-height: 1.6;
 }
 
 .top_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  font-family: "Lora", serif;
+  z-index: 5;
+}
+
+.headers {
+  position: fixed;
 }
 
 .tabs {
   display: flex;
-  gap: 1rem; /* Adjusted gap for mobile */
-  justify-content: center; /* Center align for smaller screens */
-  padding-right: 0;
-  text-decoration: none;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .tabs a {
   color: var(--primary-text-color);
   border-bottom: 3px solid transparent;
+  text-decoration: none;
 }
 
 .tabs a:hover,
@@ -48,7 +59,7 @@ body {
 .name {
   display: flex;
   gap: 3px;
-  text-align: center; /* Centering the name */
+  text-align: center;
 }
 
 .name #fname {
@@ -64,16 +75,16 @@ h3 {
   padding: 5px;
 }
 
+.home {
+  padding-top: 2cm;
+}
+
 .discription {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Keep grid format for larger screens */
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 40px 20px;
   text-align: center;
-}
-
-.discription p {
-  font-size: 14px; /* Reduced font size */
 }
 
 .discription .hello,
@@ -83,7 +94,7 @@ h3 {
 }
 
 .discription .second_line {
-  font-size: 1.6rem; /* Adjusted font size */
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--secondary-text-color);
   margin-top: 20px;
@@ -92,16 +103,15 @@ h3 {
 
 @keyframes shadow-pulse {
   50% {
-    text-shadow: 0 0 20px rgb(116, 250, 250),
-    0 0 30px rgb(116, 250, 250),
-    0 0 40px rgb(51, 215, 234);
+    text-shadow: 0 0 20px var(--secondary-text-color),
+      0 0 30px var(--secondary-text-color),
+      0 0 40px rgb(51, 215, 234);
   }
 }
 
 .bio {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-top: 40px;
+  margin-top: 110px;
+  font-size: larger;
 }
 
 .profile_pic {
@@ -129,7 +139,7 @@ h3 {
 }
 
 .social_media {
-  text-align: left; /* Align social media icons to the center */
+  text-align: center;
   padding: 20px;
 }
 
@@ -138,9 +148,9 @@ h3 {
   justify-content: center;
   align-items: center;
   background: transparent;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: var(--secondary-text-color);
-  margin: 1.5rem;
+  margin: 1.6rem;
   transition: 0.3s ease-in-out;
   text-decoration: none;
 }
@@ -151,76 +161,176 @@ h3 {
   box-shadow: 0 0 25px var(--primary-text-color);
 }
 
-.social_media img {
-  width: 40px;
-  height: 40px;
-}
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .top_header {
     flex-direction: column;
     text-align: center;
-    padding: 10px;
+    padding: 15px 10px;
   }
 
   .tabs {
-    justify-content: center;
     gap: 1rem;
   }
 
   .discription {
-    grid-template-columns: 1fr; /* 1 column layout for mobile */
-    text-align: center;
-    padding: 20px 10px; /* Less padding on small screens */
+    padding: 20px 10px;
+    grid-template-columns: 1fr;
   }
 
-  .profile_pic {
-    width: 250px; /* Smaller profile image */
-    height: 250px;
-    margin: 0 auto; /* Centered profile image */
+  .discription .hello,
+  .discription .im {
+    font-size: 1rem;
   }
 
   .discription .second_line {
-    font-size: 1.4rem; /* Slightly reduced font size */
-    margin-top: 10px;
+    font-size: 1.2rem;
   }
 
-  .bio {
-    font-size: 1rem; /* Reduced font size for better mobile view */
-    margin-top: 20px;
-  }
-
-  .social_media a {
-    font-size: 1.8rem; /* Slightly smaller icons */
-    margin: 1rem; /* Adjusted spacing between social media icons */
+  .profile_pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
   }
 
   .social_media {
-    flex-direction: column;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bio {
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 480px) {
+  .top_header {
+    padding: 10px 5px;
+  }
+
   .discription {
-    padding: 15px 5px; /* Further reduce padding */
+    padding: 10px 5px;
   }
 
   .profile_pic {
-    width: 200px; /* Even smaller profile image */
-    height: 200px;
-  }
-
-  .discription .second_line {
-    font-size: 1.2rem; /* Smaller font size */
-  }
-
-  .bio {
-    font-size: 0.9rem; /* Reduced font size */
+    width: 150px;
+    height: 150px;
   }
 
   .social_media a {
-    font-size: 1.5rem; /* Smaller social media icons */
+    font-size: 1rem;
   }
+
+  .bio {
+    font-size: 0.8rem;
+  }
+}
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.career {
+  background: var(--background-color);
+  padding: 20px;
+}
+
+.career h2 {
+  margin-bottom: 5rem;
+}
+
+.time-line-items {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.time-line-items::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  left: 50%;
+  background: var(--secondary-text-color);
+}
+
+.time-line-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.time-line-item:last-child {
+  margin-bottom: 0;
+}
+
+.time-line-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.time-line-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.time-line-dot {
+  height: 21px;
+  width: 21px;
+  background-color: var(--secondary-text-color);
+  box-shadow: 0 0 25px var(--secondary-text-color);
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  top: 10px;
+}
+
+.time-line-year {
+  font-weight: 800;
+  font-size: 20px;
+  color: white;
+  margin: 6px 0 15px;
+}
+
+.content {
+  background-color: var(--background-color);
+  border: 3px solid var(--primary-text-color);
+  padding: 30px 50px;
+  border-radius: 4rem;
+  box-shadow: 0 0 10px var(--primary-text-color);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--secondary-text-color);
+}
+
+.content h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.content p {
+  font-size: 16px;
+  color: white;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-text-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background-color);
 }
