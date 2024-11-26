@@ -161,83 +161,18 @@ h3 {
   box-shadow: 0 0 25px var(--primary-text-color);
 }
 
-@media (max-width: 768px) {
-  .top_header {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px 10px;
-  }
-
-  .tabs {
-    gap: 1rem;
-  }
-
-  .discription {
-    padding: 20px 10px;
-    grid-template-columns: 1fr;
-  }
-
-  .discription .hello,
-  .discription .im {
-    font-size: 1rem;
-  }
-
-  .discription .second_line {
-    font-size: 1.2rem;
-  }
-
-  .profile_pic {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-
-  .social_media {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .bio {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .top_header {
-    padding: 10px 5px;
-  }
-
-  .discription {
-    padding: 10px 5px;
-  }
-
-  .profile_pic {
-    width: 150px;
-    height: 150px;
-  }
-
-  .social_media a {
-    font-size: 1rem;
-  }
-
-  .bio {
-    font-size: 0.8rem;
-  }
-}
-
-.heading {
-  font-size: 4rem;
-  text-align: center;
-  margin: 5rem 0;
-}
-
 .career {
   background: var(--background-color);
-  padding: 20px;
+  padding: 20px 0;
+  text-align: center;
 }
 
+
 .career h2 {
+  margin-top: 2rem; /* Space above title */
   margin-bottom: 5rem;
+  font-size: 2.5rem;
+  color: var(--primary-text-color);
 }
 
 .time-line-items {
@@ -333,4 +268,68 @@ h3 {
 
 ::-webkit-scrollbar-track {
   background-color: var(--background-color);
+}
+
+@media (max-width: 768px) {
+  .top_header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .tabs {
+    gap: 1rem;
+  }
+
+  .discription {
+    padding: 20px 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .discription .hello,
+  .discription .im {
+    font-size: 1rem;
+  }
+
+  .discription .second_line {
+    font-size: 1.2rem;
+  }
+
+  .profile_pic {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .social_media {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bio {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top_header {
+    padding: 10px 5px;
+  }
+
+  .discription {
+    padding: 10px 5px;
+  }
+
+  .profile_pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .social_media a {
+    font-size: 1rem;
+  }
+
+  .bio {
+    font-size: 0.8rem;
+  }
 }
