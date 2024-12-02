@@ -2,9 +2,9 @@
   --primary-color: #4caf50;
   --secondary-color: #f44336;
   --font-size: 10px;
-  --primary-text-color: rgb(255, 255, 255);
-  --secondary-text-color: rgb(116, 250, 250);
-  --background-color: rgb(2, 22, 24);
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #74fafa;
+  --background-color: #021618;
 }
 
 * {
@@ -15,11 +15,12 @@
 
 body {
   background-color: var(--background-color);
-  color: rgb(231, 240, 248);
+  color: #e7f0f8;
   font-family: "Lora", serif;
   line-height: 1.6;
 }
 
+/* Top Header */
 .top_header {
   position: fixed;
   top: 0;
@@ -34,10 +35,6 @@ body {
   z-index: 5;
 }
 
-.headers {
-  position: fixed;
-}
-
 .tabs {
   display: flex;
   gap: 1rem;
@@ -48,6 +45,7 @@ body {
   color: var(--primary-text-color);
   border-bottom: 3px solid transparent;
   text-decoration: none;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .tabs a:hover,
@@ -56,13 +54,14 @@ body {
   border-bottom: 3px solid var(--secondary-text-color);
 }
 
+/* Name Styling */
 .name {
   display: flex;
   gap: 3px;
   text-align: center;
 }
 
-.name #fname {
+#fname {
   color: var(--primary-text-color);
 }
 
@@ -70,13 +69,9 @@ body {
   color: var(--secondary-text-color);
 }
 
-h3 {
-  margin: 0;
-  padding: 5px;
-}
-
+/* Home Section */
 .home {
-  padding-top: 2cm;
+  padding-top: 8rem;
 }
 
 .discription {
@@ -105,27 +100,22 @@ h3 {
   50% {
     text-shadow: 0 0 20px var(--secondary-text-color),
       0 0 30px var(--secondary-text-color),
-      0 0 40px rgb(51, 215, 234);
+      0 0 40px #33d7ea;
   }
 }
 
-.bio {
-  margin-top: 110px;
-  font-size: larger;
-}
-
+/* Profile Picture */
 .profile_pic {
   width: 400px;
   height: 400px;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--primary-text-color);
   cursor: pointer;
-  transition: 0.4s ease-in-out;
+  transition: transform 0.4s, box-shadow 0.4s;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-self: center;
 }
 
 .profile_pic img {
@@ -135,9 +125,11 @@ h3 {
 }
 
 .profile_pic:hover {
+  transform: scale(1.05);
   box-shadow: 0 0 25px var(--secondary-text-color);
 }
 
+/* Social Media Links */
 .social_media {
   text-align: center;
   padding: 20px;
@@ -147,11 +139,10 @@ h3 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
   font-size: 1.4rem;
   color: var(--secondary-text-color);
   margin: 1.6rem;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
   text-decoration: none;
 }
 
@@ -161,20 +152,21 @@ h3 {
   box-shadow: 0 0 25px var(--primary-text-color);
 }
 
+/* Career Section */
 .career {
   background: var(--background-color);
   padding: 20px 0;
   text-align: center;
 }
 
-
 .career h2 {
-  margin-top: 2rem; /* Space above title */
+  margin-top: 2rem;
   margin-bottom: 5rem;
   font-size: 2.5rem;
   color: var(--primary-text-color);
 }
 
+/* Timeline */
 .time-line-items {
   max-width: 1200px;
   margin: auto;
@@ -204,11 +196,13 @@ h3 {
 
 .time-line-item:nth-child(odd) {
   padding-right: calc(50% + 30px);
-  text-align: right;
+  /* text-align: right; */
+  text-align: center;
 }
 
 .time-line-item:nth-child(even) {
   padding-left: calc(50% + 30px);
+  text-align: center;
 }
 
 .time-line-dot {
@@ -225,7 +219,7 @@ h3 {
 .time-line-year {
   font-weight: 800;
   font-size: 20px;
-  color: white;
+  color: var(--primary-text-color);
   margin: 6px 0 15px;
 }
 
@@ -235,8 +229,7 @@ h3 {
   padding: 30px 50px;
   border-radius: 4rem;
   box-shadow: 0 0 10px var(--primary-text-color);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .content:hover {
@@ -246,90 +239,149 @@ h3 {
 
 .content h3 {
   font-size: 20px;
-  color: white;
+  color: var(--primary-text-color);
   margin: 0 0 10px;
   font-weight: 500;
 }
 
 .content p {
   font-size: 16px;
-  color: white;
-  line-height: 22px;
+  color: var(--primary-text-color);
+  line-height: 1.4;
   font-weight: 300;
 }
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-text-color);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--background-color);
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-  .top_header {
+  .time-line-items {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 15px 10px;
+    gap: 40px;
+    padding-left: 0;
+    position: relative;
+    justify-content: center; /* Ensure the line is centered */
+    margin-top: 80px; /* Add space from header if needed */
   }
 
-  .tabs {
-    gap: 1rem;
+  .time-line-items::before {
+    width: 3px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the timeline line */
+    background: var(--secondary-text-color);
+    top: 0; /* Start the line from the top (adjust as needed) */
   }
 
-  .discription {
-    padding: 20px 10px;
-    grid-template-columns: 1fr;
+  .time-line-item {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Ensure items align with the line */
   }
 
-  .discription .hello,
-  .discription .im {
-    font-size: 1rem;
+  .time-line-item:nth-child(odd) {
+    text-align: right;
+    padding-right: 50px; /* Adjust padding to align the content */
   }
 
-  .discription .second_line {
-    font-size: 1.2rem;
+  .time-line-item:nth-child(even) {
+    text-align: left;
+    padding-left: 50px; /* Adjust padding to align the content */
+  }
+
+  .time-line-year {
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: -25px; /* Position the year above the content */
+    left: calc(50% + 20px); /* Move the year further right */
+    transform: translateX(-50%); /* Center the year with the offset */
+    color: var(--primary-text-color);
+  }
+
+  .time-line-dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--secondary-text-color);
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    border-radius: 50%;
+    transform: translateX(-50%); /* Center the dot */
+    box-shadow: 0 0 10px var(--secondary-text-color);
+  }
+
+  .content {
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%; /* Full width for content */
+    box-shadow: 0 0 15px var(--primary-text-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--secondary-text-color);
+  }
+
+  .content h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+  }
+
+  .content p {
+    font-size: 14px;
+    color: var(--primary-text-color);
+    line-height: 1.4;
+    font-weight: 300;
   }
 
   .profile_pic {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-
-  .social_media {
-    flex-wrap: wrap;
+    width: 250px; /* Reduced size for mobile */
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--primary-text-color);
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s;
+    overflow: hidden;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 
-  .bio {
-    margin-top: 20px;
+  .profile_pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 @media (max-width: 480px) {
-  .top_header {
-    padding: 10px 5px;
+  .time-line-items {
+    padding-left: 15px;
+    gap: 30px;
   }
 
-  .discription {
-    padding: 10px 5px;
+  .time-line-year {
+    font-size: 12px;
+    top: -20px; /* Adjust the year position for very small screens */
+    left: calc(50% + 15px); /* Move the year slightly to the right for smaller screens */
+  }
+
+  .time-line-dot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .content {
+    padding: 15px;
   }
 
   .profile_pic {
-    width: 150px;
-    height: 150px;
-  }
-
-  .social_media a {
-    font-size: 1rem;
-  }
-
-  .bio {
-    font-size: 0.8rem;
+    width: 200px; /* Further reduce size for very small screens */
+    height: 200px;
   }
 }
