@@ -37,7 +37,7 @@ body {
 
 .tabs {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
   justify-content: center;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .discription {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 20px;
   padding: 40px 20px;
   text-align: center;
@@ -106,8 +106,8 @@ body {
 
 /* Profile Picture */
 .profile_pic {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--primary-text-color);
   cursor: pointer;
@@ -116,6 +116,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto; /* Center the profile picture */
+  margin-left: 30%;
 }
 
 .profile_pic img {
@@ -132,7 +134,7 @@ body {
 /* Social Media Links */
 .social_media {
   text-align: center;
-  padding: 20px;
+  padding: 80px 0px 100px 0px
 }
 
 .social_media a {
@@ -155,21 +157,36 @@ body {
 /* Career Section */
 .career {
   background: var(--background-color);
-  padding: 20px 0;
+  padding-top: 20px; /* Add a small top padding */
+  padding-bottom: 20px; /* Optional for consistent spacing */
   text-align: center;
+  height: calc(100vh - 20px); /* Subtract the top padding from the viewport height */
+  display: flex; /* Center content both vertically and horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no overflow issues */
 }
 
 .career h2 {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem; /* Adjust spacing */
   font-size: 2.5rem;
   color: var(--primary-text-color);
 }
 
+.career p {
+  font-size: 1rem;
+  color: var(--primary-text-color);
+  max-width: 800px; /* Limit text width for readability */
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+
 /* Timeline */
 .time-line-items {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -226,10 +243,11 @@ body {
 .content {
   background-color: var(--background-color);
   border: 3px solid var(--primary-text-color);
-  padding: 30px 50px;
+  padding: 6px 20px;
   border-radius: 4rem;
   box-shadow: 0 0 10px var(--primary-text-color);
   transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 0px;
 }
 
 .content:hover {
@@ -279,6 +297,13 @@ body {
     font-size: 1.4rem; /* Adjust font size */
     gap: 5px; /* Reduce space between first and last name */
     text-align: center;
+  }
+  .social_media{
+    padding: 120px 0px;
+  }
+  .time-line-items {
+    margin-top: 0; /* Remove only the top margin */
+    padding-top: 0; /* Ensure no extra top padding exists */
   }
 
   #fname, #lname {
@@ -420,7 +445,7 @@ body {
 @media (max-width: 480px) {
   .time-line-items {
     padding-left: 15px;
-    gap: 30px;
+    gap: 0px;
   }
 
   .time-line-year {
