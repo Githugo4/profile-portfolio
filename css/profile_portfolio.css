@@ -71,8 +71,8 @@ body {
 
 /* Home Section */
 .home {
-  padding-top: 8rem;
-  padding-bottom: 40px;
+  padding: 8rem 20px 40px;
+  text-align: center;
 }
 
 .discription {
@@ -162,11 +162,11 @@ body {
   padding-bottom: 40px; /* Optional for consistent spacing */
   text-align: center;
   height: calc(100vh - 20px); /* Subtract the top padding from the viewport height */
-  display: flex; /* Center content both vertically and horizontally */
+  /* display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Ensure no overflow issues */
+  overflow: hidden; */
 }
 
 .career h2 {
