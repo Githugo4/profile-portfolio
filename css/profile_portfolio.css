@@ -72,6 +72,7 @@ body {
 /* Home Section */
 .home {
   padding-top: 8rem;
+  padding-bottom: 40px;
 }
 
 .discription {
@@ -158,7 +159,7 @@ body {
 .career {
   background: var(--background-color);
   padding-top: 40px; /* Add a small top padding */
-  padding-bottom: 20px; /* Optional for consistent spacing */
+  padding-bottom: 40px; /* Optional for consistent spacing */
   text-align: center;
   height: calc(100vh - 20px); /* Subtract the top padding from the viewport height */
   display: flex; /* Center content both vertically and horizontally */
