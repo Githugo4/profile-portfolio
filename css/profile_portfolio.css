@@ -157,7 +157,7 @@ body {
 /* Career Section */
 .career {
   background: var(--background-color);
-  padding-top: 20px; /* Add a small top padding */
+  padding-top: 40px; /* Add a small top padding */
   padding-bottom: 20px; /* Optional for consistent spacing */
   text-align: center;
   height: calc(100vh - 20px); /* Subtract the top padding from the viewport height */
@@ -181,7 +181,6 @@ body {
   line-height: 1.6;
   margin: 0 auto;
 }
-
 
 
 /* Timeline */
