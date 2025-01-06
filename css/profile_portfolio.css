@@ -6,7 +6,9 @@
   --secondary-text-color: #74fafa;
   --background-color: #021618;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -270,6 +272,112 @@ body {
   font-weight: 300;
 }
 
+.about-section {
+  padding: 60px 20px;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  border-top: 2px solid var(--secondary-text-color);
+  text-align: center;
+}
+
+.section-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-intro,
+.about-details,
+.about-summary,
+.about-closing {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--primary-text-color);
+}
+
+.about-highlights-title {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.about-highlights-list {
+  list-style-type: disc;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.about-highlights-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--primary-text-color);
+}
+
+.contact {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact .section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3, .contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details li {
+  margin-bottom: 10px;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  margin: 0 10px;
+  color: var(--secondary-text-color);
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: var(--primary-text-color);
+  box-shadow: 0 0 25px var(--primary-text-color);
+}
+
+
 @media (max-width: 768px) {
   .top_header {
     display: block; /* Remove flex layout and use block */
@@ -441,6 +549,34 @@ body {
     height: 100%;
     object-fit: cover;
   }
+
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-highlights-title {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .about-highlights-list {
+    margin-left: 20px;
+  }
+
+  .about-highlights-list li {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -467,5 +603,26 @@ body {
   .profile_pic {
     width: 200px; /* Further reduce size for very small screens */
     height: 200px;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .about-content {
+    font-size: 0.9rem;
+  }
+
+  .about-highlights-title {
+    font-size: 1rem;
+  }
+
+  .about-highlights-list {
+    margin-left: 15px;
+  }
+
+  .about-highlights-list li {
+    font-size: 0.8rem;
   }
 }
