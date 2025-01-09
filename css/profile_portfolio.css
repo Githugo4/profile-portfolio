@@ -160,19 +160,21 @@ body {
 /* Career Section */
 .career {
   background: var(--background-color);
-  padding-top: 40px; /* Add a small top padding */
-  padding-bottom: 40px; /* Optional for consistent spacing */
+  padding-top: 40px; 
+  padding-bottom: 40px;
   text-align: center;
-  height: calc(100vh - 20px); /* Subtract the top padding from the viewport height */
-  /* display: flex; 
-  flex-direction: column;
+  height: calc(100vh - 20px);
   justify-content: center;
-  align-items: center;
-  overflow: hidden; */
+}
+
+.heading{
+  padding-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .career h2 {
-  margin-bottom: 2rem; /* Adjust spacing */
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   color: var(--primary-text-color);
 }
@@ -180,13 +182,11 @@ body {
 .career p {
   font-size: 1rem;
   color: var(--primary-text-color);
-  max-width: 800px; /* Limit text width for readability */
+  max-width: 800px;
   line-height: 1.6;
   margin: 0 auto;
 }
 
-
-/* Timeline */
 .time-line-items {
   max-width: 1000px;
   margin: 0 auto;
@@ -210,13 +210,9 @@ body {
   position: relative;
 }
 
-.time-line-item:last-child {
-  margin-bottom: 0;
-}
-
 .time-line-item:nth-child(odd) {
   padding-right: calc(50% + 30px);
-  /* text-align: right; */
+  text-align: right;
   text-align: center;
 }
 
@@ -276,7 +272,7 @@ body {
   padding: 60px 20px;
   background-color: var(--background-color);
   color: var(--primary-text-color);
-  border-top: 2px solid var(--secondary-text-color);
+  border-top: 2px;
   text-align: center;
 }
 
@@ -289,7 +285,7 @@ body {
 }
 
 .about-content {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   line-height: 1.8;
   text-align: justify;
@@ -299,13 +295,14 @@ body {
 .about-details,
 .about-summary,
 .about-closing {
+  font-size: medium !important;
   margin-bottom: 20px;
   font-size: 1.1rem;
   color: var(--primary-text-color);
 }
 
 .about-highlights-title {
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
   margin-top: 30px;
   margin-bottom: 15px;
   color: var(--secondary-text-color);
@@ -411,8 +408,8 @@ body {
     padding: 120px 0px;
   }
   .time-line-items {
-    margin-top: 0; /* Remove only the top margin */
-    padding-top: 0; /* Ensure no extra top padding exists */
+    margin-top: 0; 
+    padding-top: 0;
   }
 
   #fname, #lname {
@@ -450,16 +447,16 @@ body {
     gap: 40px;
     padding-left: 0;
     position: relative;
-    justify-content: center; /* Ensure the line is centered */
-    margin-top: 80px; /* Add space from header if needed */
+    justify-content: center; 
+    margin-top: 80px;
   }
 
   .time-line-items::before {
     width: 3px;
     left: 50%;
-    transform: translateX(-50%); /* Center the timeline line */
+    transform: translateX(-50%);
     background: var(--secondary-text-color);
-    top: 0; /* Start the line from the top (adjust as needed) */
+    top: 0;
   }
 
   .time-line-item {
@@ -468,7 +465,7 @@ body {
     padding-right: 20px;
     margin-bottom: 30px;
     display: flex;
-    justify-content: center; /* Ensure items align with the line */
+    justify-content: center;
   }
 
   .time-line-item:nth-child(odd) {
