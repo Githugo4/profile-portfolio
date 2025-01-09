@@ -354,10 +354,15 @@ body {
 .contact-details {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 
 .contact-details li {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  padding-left: 500px;
+}
+.address-line{
+  padding-left: 75px;
 }
 
 .social-media {
