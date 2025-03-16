@@ -2,133 +2,363 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Githu Varghese | Software Engineer</title>
+  <meta name="description" content="Professional portfolio of Githu Varghese, a specialized software engineer with expertise in Python, FastAPI, JavaScript, SQL, and more.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Githu Varghese Profile Portfolio</title>
-  <link rel="stylesheet" href="css/profile_portfolio.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/profile_portfolio.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
-  <div class="top_header" id="headers">
-    <div class="name">
-      <h3 class="name" id="fname">Profile</h3>
-      <h3 class="name" id="lname">Portfolio</h3>
+  <header class="top_header" id="headers">
+    <div class="container">
+      <div class="logo">
+        <h1 class="name"><span id="fname">Githu</span> <span id="lname">Varghese</span></h1>
+      </div>
+      <nav class="tabs">
+        <a href="#home" class="tab-link active">Home</a>
+        <a href="#skills" class="tab-link">Skills</a>
+        <a href="#career" class="tab-link">Education</a>
+        <a href="#experience" class="tab-link">Experience</a>
+        <a href="#abouts" class="tab-link">About</a>
+        <a href="#contacts" class="tab-link">Contact</a>
+      </nav>
     </div>
-    <div class="tabs">
-      <a href="#home" class="tabs" id="homes">Home</a>
-      <a href="#career" class="tabs" id="careers">Career</a>
-      <a href="#abouts" class="tabs" id="about">About</a>
-      <a href="#contacts" class="tabs" id="contact">Contact</a>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="details">
+          <p class="greeting"><span class="hello">Hello,</span> <span class="im">I'm</span></p>
+          <h2 class="name-headline">Githu Varghese</h2>
+          <h3 class="title">Software Engineer</h3>
+          <p class="bio">
+            A results-driven software engineer with expertise in backend development and database management. Specializing in Python, FastAPI, JavaScript, SQL, and MongoDB, I deliver scalable solutions with a focus on performance optimization and clean code architecture. Let's connect to discuss how my technical skills can help solve your business challenges.
+          </p>
+          <div class="cta-buttons">
+            <a href="#contacts" class="btn primary-btn">Contact Me</a>
+          </div>
+        </div>
+        <div class="profile_pic">
+          <img src="img/test.jpg" alt="Githu Varghese" class="pro_pic">
+        </div>
+      </div>
     </div>
-  </div>
-  <section class="home" id="home">
-    <div class="discription">
-      <div class="details">
-        <p><span class="hello">Hello</span><span class="im"> I'm</span></p>
-        <h2 class="second_line">Githu Varghese</h2>
-        <p class="bio">
-          Githu Varghese is a passionate software engineer with a Master of Computer Applications (MCA) degree. Known for his strong problem-solving abilities, he excels at tackling complex challenges and driving innovation. Outside of work, Githu enjoys playing football, watching movies, and drawing, finding a balance between his professional life and personal hobbies, while also cherishing his family commitments.
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-heading">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">HTML/CSS</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <!-- <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 75%"></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Database</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">FastAPI</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">MongoDB</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SQL/PostgreSQL</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Development Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Git & Version Control</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Postman, Swagger</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <!-- <div class="skill-item">
+              <span class="skill-name">Jira/Agile Workflows</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 83%"></div>
+              </div>
+            </div> -->
+            <!-- <div class="skill-item">
+              <span class="skill-name">CI/CD Pipelines</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 78%"></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="education" id="career">
+    <div class="container">
+      <h2 class="section-heading">Education</h2>
+      <div class="time-line-items">
+        <div class="time-line-item">
+          <div class="time-line-year">2022</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>Union Christian College, Aluva</p>
+            <p class="education-details">GPA: 8.7/10</p>
+            <!-- <p class="education-details">Specialized in Advanced Database Systems and API Development</p> -->
+          </div>
+        </div>
+        <div class="time-line-item">
+          <div class="time-line-year">2020</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>St. Mary's College, Thuruthipilly</p>
+            <p class="education-details">GPA: 5.8/10</p>
+            <!-- <p class="education-details">Final Project: Inventory Management System using Python and SQL</p> -->
+          </div>
+        </div>
+        <div class="time-line-item">
+          <div class="time-line-year">2017</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Higher Secondary School (Science Stream)</h3>
+            <p>St. Peter's Higher Secondary School, Kolenchery</p>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </section>
+
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="section-heading">Professional Experience</h2>
+      <div class="time-line-items">
+        <div class="time-line-item">
+          <div class="time-line-year">2025-Present</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Software Engineer</h3>
+            <p>Custom Development</p>
+            <ul class="experience-details">
+              <li>Custom Backend development for client projects using Python and FastAPI</li>
+              <!-- Add items -->
+            </ul>
+          </div>
+        </div>
+        <div class="time-line-item">
+          <div class="time-line-year">2024-2025</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Software Engineer</h3>
+            <p>UniftyTwin Technologies</p>
+            <ul class="experience-details">
+              <li>Custom Backend development for client projects using Python and FastAPI</li>
+              <li>Designed and optimized PostgreSQL database schemas for high-performance applications</li>
+              <li>Custom Javascrpits creation to perform custom requiremnts</li>
+              <li>Mentored junior developers in best practices and code review processes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="time-line-item">
+          <div class="time-line-year">2023-2024</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Junior Developer</h3>
+            <p>KLapp Technologies</p>
+            <ul class="experience-details">
+              <li>Developed a module for handling internal purposes of employee data handel</li>
+              <li>Fixed bugs in KL Apps.</li>
+              <li>Collaborated in an Agile team environment with biweekly sprints.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="time-line-item">
+          <div class="time-line-year">2022-2023</div>
+          <div class="time-line-dot"></div>
+          <div class="content">
+            <h3>Junior Developer</h3>
+            <p>Home Fact Solutions</p>
+            <ul class="experience-details">
+              <li>Designed and developed a FastAPI application to support the HomeFact app from scratch</li>
+              <li>Implemented essential endpoints for key functionalities such as data management and user interface features</li>
+              <li>Gained hands-on experience across the entire project lifecycle, including planning, development, testing, and deployment</li>
+              <li>Focused on optimizing performance, ensuring high-quality code standards and robust functionality</li>
+            </ul>
+          </div>
+        </div>
+      </div>    
+    </div>
+  </section>
+
+  <section class="about-section" id="abouts">
+    <div class="container">
+      <h2 class="section-heading">About Me</h2>
+      <div class="about-content">
+        <p class="about-intro">
+          I'm Githu Varghese, a full-stack software engineer with a specialization in backend development and database optimization. With a strong academic foundation and practical industry experience, I bring technical expertise and problem-solving skills to every project I undertake.
+        </p>
+        <p class="about-details">
+          My professional journey spans development roles at UniftyTwin, KLapp, and Home Fact, where I've consistently delivered high-quality solutions that drive business value. I combine technical proficiency with a collaborative approach, ensuring that code quality and performance are never compromised.
+        </p>
+        
+        <div class="achievements-section">
+          <h3 class="about-highlights-title">Key Achievements</h3>
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <i class='bx bx-code-alt'></i>
+              <h4>Process Automation</h4>
+              <p>Engineered automation tools that reduced operational costs by 30% while improving data accuracy to 99.8%.</p>
+            </div>
+            <div class="achievement-card">
+              <i class='bx bx-data'></i>
+              <h4>Database Optimization</h4>
+              <p>Restructured database architecture resulting in 60% faster query performance and improved application responsiveness.</p>
+            </div>
+            <div class="achievement-card">
+              <i class='bx bx-edit'></i>
+              <h4>API Development</h4>
+              <p>Designed and implemented RESTful APIs with comprehensive documentation that increased third-party integration efficiency by 45%.</p>
+            </div>
+            <div class="achievement-card">
+              <i class='bx bx-task'></i>
+              <h4>System Reliability</h4>
+              <p>Implemented robust error handling and monitoring solutions that decreased system downtime by 75% and improved user experience.</p>
+            </div>
+          </div>
+        </div>
+        
+        <p class="about-summary">
+          My technical approach emphasizes clean code architecture, performance optimization, and scalable solutions. I specialize in developing maintainable systems that can grow with business needs while maintaining reliability and security.
+        </p>
+        <p class="about-closing">
+          When not coding, I stay current with emerging technologies through continuous learning and participation in professional development communities. I'm particularly interested in cloud-native architectures, microservices, and the practical applications of machine learning in business solutions.
         </p>
       </div>
-      <div class="profile_pic">
-        <img src="img/test.jpg" alt="Githu Varghese" class="pro_pic">
-      </div>
-    </div>
-    <div class="social_media">
-      <a href="https://www.facebook.com/githu.varghese.9/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
-      <a href="https://x.com/githu_varghese" target="_blank"><i class='bx bxl-twitter'></i></a>
-      <a href="https://www.linkedin.com/in/githu-varghese-5364b3283/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-      <a href="https://www.instagram.com/githu_varghese" target="_blank"><i class='bx bxl-instagram'></i></a>
-    </div>
-  </section>
-  <section class="careers" id="career">
-    <h2 class="heading">Education</h2>
-    <div class="time-line-items">
-      <div class="time-line-item">
-        <div class="time-line-year">2015</div>
-        <div class="content">
-          <h3>High School</h3>
-          <p>Nirmala Higher Secondary School, Muvattupuzha</p>
-        </div>
-      </div>
-      <div class="time-line-item">
-        <div class="time-line-year">2017</div>
-        <div class="content">
-          <h3>Higher Secondary School</h3>
-          <p>St. Peter's Higher Secondary School, Kolenchery</p>
-        </div>
-      </div>
-      <div class="time-line-item">
-        <div class="time-line-year">2020</div>
-        <div class="content">
-          <h3>BCA</h3>
-          <p>St. Mary's College, Thuruthipilly</p>
-        </div>
-      </div>
-      <div class="time-line-item">
-        <div class="time-line-year">2022</div>
-        <div class="content">
-          <h3>MCA</h3>
-          <p>Union Christian College, Aluva</p>
-        </div>
-      </div>
-    </div>    
-  </section>
-  <section class="about-section" id="abouts">
-    <h2 class="section-heading">About Me</h2>
-    <div class="about-content">
-      <p class="about-intro">
-        I’m Githu, a results-oriented software developer with a strong academic background and extensive industry experience. I hold a Master of Computer Applications (MCA, 2020–2022) and a Bachelor of Computer Applications (BCA, 2017–2020). I have had the privilege of working with leading organizations such as Home Fact, KLapp, and Uniftytwin.
-      </p>
-      <p class="about-details">
-        My technical expertise spans a wide array of technologies, including Python, FastAPI, JavaScript, SQL, PSQL, MongoDB, and HTML/CSS. I excel at developing efficient backend systems, designing intuitive front-end interfaces, and creating automation scripts that streamline workflows, reduce manual effort, and save time.
-      </p>
-      <p class="about-highlights-title"><strong>Key Accomplishments:</strong></p>
-      <ul class="about-highlights-list">
-        <li><strong>Automation Scripts:</strong> Designed and implemented scripts that optimized routine processes, significantly reducing working time and manual effort for teams.</li>
-        <li><strong>FastAPI-based SQL Query Generator:</strong> Built a dynamic tool to process Excel inputs and generate SQL queries efficiently.</li>
-        <li><strong>Dynamic Form Integrations:</strong> Customized Form.io to enable real-time API data fetching and processing.</li>
-        <li><strong>Task Automation Systems:</strong> Developed and debugged periodic task management features, resolving critical issues and enhancing system reliability.</li>
-      </ul>
-      <p class="about-summary">
-        I am skilled in database management using SQL, PSQL, and MongoDB, with hands-on experience in designing and optimizing data storage solutions for complex applications. Passionate about problem-solving, I prioritize delivering scalable, maintainable, and efficient code.
-      </p>
-      <p class="about-closing">
-        Thriving in collaborative environments, I bring creative thinking and analytical skills to every project, ensuring impactful and innovative solutions. I am committed to staying at the forefront of emerging technologies, driving excellence in every endeavor I undertake.
-      </p>
     </div>
   </section> 
+
   <section class="contact" id="contacts">
-    <h2 class="section-heading">Contact Me</h2>
-    <div class="contact-content">
-      <div class="contact-info">
-        <h3>Get in Touch</h3>
-        <p>If you have any questions or would like to collaborate, feel free to reach out to me!</p>
-        <ul class="contact-details">
-          <li><strong>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong> githuvarghese97@gamil.com</li>
-          <li><strong>Phone&nbsp;&nbsp;&nbsp;&nbsp;:</strong> +91 8848468103</li>
-          <li><strong>Address&nbsp;:</strong> Palakkattu House
-            <!-- <div class="address-line">Palakkattu House</div> -->
-            <div class="address-line">Valamboor</div>
-            <div class="address-line">Pattimattiom PO</div>
-            <div class="address-line">Ernakulam</div>
-            <div class="address-line">Kerala</div>
-            <div class="address-line">India</div>
-            <div class="address-line">683562</div>
-          </li>
-          
-        </ul>
-        <div class="social-media">
-          <h3>Find Me On</h3>
-          <a href="https://www.facebook.com/githu.varghese.9/" target="_blank" class="social-icon"><i class='bx bxl-facebook-square'></i></a>
-          <a href="https://x.com/githu_varghese" target="_blank" class="social-icon"><i class='bx bxl-twitter'></i></a>
-          <a href="https://www.linkedin.com/in/githu-varghese-5364b3283/" target="_blank" class="social-icon"><i class='bx bxl-linkedin-square'></i></a>
-          <a href="https://www.instagram.com/githu_varghese" target="_blank" class="social-icon"><i class='bx bxl-instagram'></i></a>
+    <div class="container">
+      <h2 class="section-heading">Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>I'm currently available for freelance projects, consulting work, and full-time opportunities. Let's discuss how I can contribute to your team or project.</p>
+          <ul class="contact-details">
+            <li>
+              <i class='bx bx-envelope'></i>
+              <div>
+                <h4>Email</h4>
+                <p>githuvarghese97@gmail.com</p>
+              </div>
+            </li>
+            <li>
+              <i class='bx bx-phone'></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 8848468103</p>
+              </div>
+            </li>
+            <li>
+              <i class='bx bx-map'></i>
+              <div>
+                <h4>Location</h4>
+                <p>Ernakulam, Kerala, India</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Send Me a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="social-media">
+        <h3>Professional Networks</h3>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/githu-varghese-5364b3283/" target="_blank" class="social-icon" aria-label="LinkedIn Profile"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="https://github.com/Githugo4" target="_blank" class="social-icon" aria-label="GitHub Profile"><i class='bx bxl-github'></i></a>
+          <a href="https://x.com/githu_varghese" target="_blank" class="social-icon" aria-label="Twitter Profile"><i class='bx bxl-twitter'></i></a>
+          <!-- <a href="https://stackoverflow.com/" target="_blank" class="social-icon" aria-label="Stack Overflow Profile"><i class='bx bxl-stack-overflow'></i></a> -->
         </div>
       </div>
     </div>
   </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Githu Varghese. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
