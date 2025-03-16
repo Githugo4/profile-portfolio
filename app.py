@@ -6,40 +6,48 @@ from flask_cors import CORS
 import os
 import logging
 
+# Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Email Configuration - Set these values directly
 EMAIL_USER = "githuvarghese97@gmail.com"
+# EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD', "")
 EMAIL_PASSWORD = "qhasogqvrpgvilwy"
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # This allows your frontend to make requests to this API
 
 
 @app.route('/send-email', methods=['POST'])
 def send_email():
     data = request.json
 
+    # Validate required fields
     required_fields = ['name', 'email', 'message']
     for field in required_fields:
         if not data.get(field):
             return jsonify({"status": "error", "message": f"Missing required field: {field}"}), 400
 
+    # Get form data
     name = data.get('name')
     email = data.get('email')
     subject = data.get('subject', 'New Contact Form Submission')
     message = data.get('message')
 
+    # Check if password is set
     if not EMAIL_PASSWORD:
         logger.error("Email password not set")
         return jsonify({"status": "error",
                         "message": "Email password not configured. Set the EMAIL_PASSWORD environment variable."}), 500
 
+    # Create the email
     msg = MIMEMultipart()
     msg['From'] = EMAIL_USER
-    msg['To'] = EMAIL_USER
+    msg['To'] = EMAIL_USER  # Sending to yourself
     msg['Subject'] = f"Portfolio Contact: {subject}"
 
+    # Construct email body
     body = f"""
     You received a new message from your portfolio website:
 
@@ -53,13 +61,16 @@ def send_email():
     msg.attach(MIMEText(body, 'plain'))
 
     try:
+        # Connect to SMTP server
         server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.ehlo() 
-        server.starttls()
-        server.ehlo()
+        server.ehlo()  # Identify to the SMTP server
+        server.starttls()  # Secure the connection
+        server.ehlo()  # Re-identify over TLS connection
 
+        # Login to the email account
         server.login(EMAIL_USER, EMAIL_PASSWORD)
 
+        # Send email
         text = msg.as_string()
         server.sendmail(EMAIL_USER, EMAIL_USER, text)
         server.quit()
